@@ -23,12 +23,12 @@ app.post("/fish", function(req, res) {
 app.patch("/fish/:index", function(req, res) {
 	kindsOfFish[req.params.index] = req.body.newFish;
 	res.json(kindsOfFish);
-})
+});
 
 app.delete("/fish/:index", function(req, res) {
 	kindsOfFish.splice(req.params.index, 1);
 	res.json(kindsOfFish);
-})
+});
 
 server.listen(3000, function(){
 	console.log("Listening on 3000!!")
