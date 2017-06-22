@@ -8,8 +8,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 var moviesArray = ["Rosemary's Baby", "Alien"];
 
-app.get('/movies', function(request, response) {
+app.get('/movies/', function(request, response) {
 	response.json(moviesArray)
+})
+
+app.get('/movies/:wildcard', function(request, response) {
+	var index = request.params.wildcard;
+	response.json(moviesArray[index])
 })
 
 app.post('/movies/', function(request, response) {
