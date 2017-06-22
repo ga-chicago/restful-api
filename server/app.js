@@ -27,6 +27,21 @@ app.post('/flutes/', function(req, res){
     res.json("success")
 })
 
+app.patch('/flutes/:index', function(req, res){
+    //edit flute in flutes
+    var index = req.params.index
+    var flute = req.body.flute
+    flutes[index] = flute
+    res.json("success")
+})
+
+app.delete('/flutes/:index', function(req, res){
+    //delete flute in flutes
+    var index = req.params.index
+    flutes.splice(index, 1)
+    res.json("success")
+})
+
 server.listen(3000, function(){
     console.log('listening on port 3000');
 });
