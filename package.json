@@ -1,0 +1,20 @@
+{
+  "name": "restful-api",
+  "version": "1.0.0",
+  "description": "Create a RESTful API for an object of your choice.",
+  "main": "./server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AceCat/restful-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AceCat/restful-api/issues"
+  },
+  "homepage": "https://github.com/AceCat/restful-api#readme"
+}
